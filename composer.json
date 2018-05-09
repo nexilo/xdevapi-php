@@ -1,0 +1,13 @@
+{
+    "name": "nexilo/xdevapi-php",
+    "type": "library",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "NEXILO",
+            "email": "kamil@nexilo.uk"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
