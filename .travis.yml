@@ -1,18 +1,11 @@
 language: php
 sudo: enabled
 
+services:
+  - docker
+
 php:
   - '7.1'
 
-before_install:
-  - sudo apt-get -qq update
-  - sudo apt-get install -y build-essential libprotobuf-dev libboost-dev openssl protobuf-compiler software-properties-common
-  - sudo add-apt-repository ppa:ondrej/php -y
-  - sudo apt-get update -q
-  - sudo apt-get install -y php7.1-cli php7.1-dev php7.1-mysql php7.1-pdo php7.1-xml composer
-
-before_script:
-    - yes '' | pecl install -f mysql_xdevapi
-    - echo "extension=mysql_xdevapi.so" >> `php --ini | grep "Loaded Configuration" | sed -e "s|.*:\s*||"`
-    - curl -s http://getcomposer.org/installer | php
-    - php composer.phar install
+script:
+  - docker build
