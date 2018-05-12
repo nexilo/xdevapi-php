@@ -1,0 +1,15 @@
+language: php
+sudo: enabled
+
+php:
+  - '7.1'
+
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get -y build-essential libprotobuf-dev libboost-dev openssl protobuf-compiler software-properties-common
+
+before_script:
+    - sudo pecl install mysql_xdevapi
+    - echo "extension=mysql_xdevapi.so" >> `php --ini | grep "Loaded Configuration" | sed -e "s|.*:\s*||"`
+    - curl -s http://getcomposer.org/installer | php
+    - php composer.phar install
