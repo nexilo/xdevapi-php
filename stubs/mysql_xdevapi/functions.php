@@ -1,4 +1,4 @@
 <?php
 namespace mysql_xdevapi;
-function getSession() {}
+function getSession(string $uri): Session {}
 function expression(string $expression) {}

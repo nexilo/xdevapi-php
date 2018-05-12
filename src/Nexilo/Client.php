@@ -1,6 +1,9 @@
 <?php
 namespace Nexilo;
 
+use mysql_xdevapi\Exception;
+use mysql_xdevapi\Session;
+
 class Client
 {
     /**
@@ -12,6 +15,11 @@ class Client
      * @var string
      */
     private $dsn;
+
+    /**
+     * @var Session
+     */
+    private $session;
 
     /**
      * Client constructor.
@@ -36,8 +44,26 @@ class Client
         $this->dsn = $dsn;
     }
 
-    public function getSession()
+    /**
+     * Method for getting raw session data
+     *
+     * @return Session
+     */
+    public function getRawSession(): Session
     {
         return \mysql_xdevapi\getSession($this->dsn);
+    }
+
+    /**
+     * Method for getting session and error exception if cannot connect to database
+     *
+     * @return Session
+     */
+    public function getSession(): Session
+    {
+        $this->session = $this->getRawSession();
+        if (null === $this->session) {
+            throw new Exception('Connection could not be established');
+        }
     }
 }

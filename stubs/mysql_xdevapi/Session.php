@@ -7,7 +7,7 @@ class Session
     {
     }
 
-    public function executeSql()
+    public function executeSql(string $statement): object
     {
     }
 
@@ -19,67 +19,67 @@ class Session
     {
     }
 
-    public function getServerVersion()
+    public function getServerVersion(): int
     {
     }
 
-    public function getClientId()
+    public function getClientId(): string
     {
     }
 
-    public function generateUUID()
+    public function generateUUID(): string
     {
     }
 
-    public function createSchema()
+    public function createSchema(string $schema_name): Schema
     {
     }
 
-    public function dropSchema()
+    public function dropSchema(string $schema_name): bool
     {
     }
 
-    public function getSchemas()
+    public function getSchemas(): array
     {
     }
 
-    public function getSchema()
+    public function getSchema(): Schema
     {
     }
 
-    public function startTransaction()
+    public function startTransaction(): void
     {
     }
 
-    public function commit()
+    public function commit(): object
     {
     }
 
-    public function rollback()
+    public function rollback(): void
     {
     }
 
-    public function setSavepoint($name = null)
+    public function setSavepoint($name = null): string
     {
     }
 
-    public function rollbackTo(string $name = null)
+    public function rollbackTo(string $name = null): void
     {
     }
 
-    public function releaseSavepoint(string $name = null)
+    public function releaseSavepoint(string $name = null): void
     {
     }
 
-    public function listClients()
+    public function listClients(): array
     {
     }
 
-    public function killClient(int $client_id)
+    public function killClient(int $client_id): object
     {
     }
 
-    public function close()
+    public function close(): void
     {
     }
 }
