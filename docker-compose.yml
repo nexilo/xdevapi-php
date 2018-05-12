@@ -2,15 +2,9 @@ version: '3'
 services:
   php:
       build: 'docker/php'
-      restart: always
+      tty: true
       volumes:
-          - "./:/var/www/html"
-
-  composer:
-      image: "composer"
-      volumes:
-          - "./:/var/www/html"
-      command: install
+          - "./:/var/www/"
 
   mysqldb:
       image: mysql:${MYSQL_VERSION}
