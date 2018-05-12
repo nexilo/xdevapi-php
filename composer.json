@@ -10,7 +10,7 @@
             "email": "kamil@nexilo.uk"
         }
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "require": {
         "php": "^7.1"
     },
@@ -21,5 +21,8 @@
     },
     "config": {
         "sort-packages": true
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.1"
     }
 }
