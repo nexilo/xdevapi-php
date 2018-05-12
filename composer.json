@@ -1,7 +1,7 @@
 {
     "name": "nexilo/xdevapi-php",
     "type": "library",
-    "description": "PHP Library to provide mysql-xdevapi functions",
+    "description": "Low level PHP Library for mysql-xdevapi ",
     "keywords": ["mysql", "api", "xdevapi", "storage", "nosql"],
     "license": "GPL",
     "authors": [
