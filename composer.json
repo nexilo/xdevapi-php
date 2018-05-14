@@ -3,7 +3,7 @@
     "type": "library",
     "description": "Low level PHP Library for mysql-xdevapi ",
     "keywords": ["mysql", "api", "xdevapi", "storage", "nosql"],
-    "license": "GPL",
+    "license": "Apache-2.0",
     "authors": [
         {
             "name": "NEXILO",
