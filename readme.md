@@ -42,7 +42,7 @@ Simple wrapper for xdevapi getSession function in PHP pecl extension
  
          require 'vendor/autoload.php';
  
-         $client = XdevApiClientBuilder::getInstance('yourDsnHere')->getSession();
+         $session = XdevApiClientBuilder::getInstance('yourDsnHere')->getSession();
      ```
  You can find out more on how to install Composer, configure autoloading, and other best-practices for defining dependencies at [getcomposer.org](http://getcomposer.org).
  
