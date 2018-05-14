@@ -46,15 +46,5 @@ Simple wrapper for xdevapi getSession function in PHP pecl extension
      ```
  You can find out more on how to install Composer, configure autoloading, and other best-practices for defining dependencies at [getcomposer.org](http://getcomposer.org).
  
-![image alt <>](https://nexilo.uk/static/nexilo_new.svg)
+![Web Applications](https://nexilo.uk/static/nexilo_new.svg)
  
- <style>
- img[alt$="<>"] {
-     display: block;
-     width: 250px;
-     max-width: 100%;
-     height: auto;
-     margin: auto;
-     float: none!important;
- }
- </style>
