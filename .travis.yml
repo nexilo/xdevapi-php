@@ -14,5 +14,6 @@ before_install:
 
 script:
   - cp .env.dist .env
-  - docker-compose build
-
+  - docker-compose up -d
+  - docker exec -it xdevapi-php_php_1 /var/www/vendor/bin/phpunit -c /var/www/phpunit.xml
+  - docker stop $(docker ps -a -q)

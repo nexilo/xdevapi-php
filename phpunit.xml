@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/7.1/phpunit.xsd"
+         bootstrap="tests/bootstrap.php"
+         colors="true"
+         failOnRisky="true"
+         verbose="true"
+         beStrictAboutChangesToGlobalState="true"
+         beStrictAboutOutputDuringTests="true">
+
+    <php>
+        <server name="MYSQL_TEST_HOST" value="mysqldb" />
+        <server name="MYSQL_TEST_MYSQL_DATABASE" value="test" />
+        <server name="MYSQL_TEST_MYSQL_ROOT_USER" value="root" />
+        <server name="MYSQL_TEST_MYSQL_ROOT_PASSWORD" value="root" />
+        <server name="MYSQL_TEST_MYSQL_USER" value="dev" />
+        <server name="MYSQL_TEST_MYSQL_PASSWORD" value="dev" />
+    </php>
+
+    <testsuites>
+        <testsuite name="Tests">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+
+    <filter>
+        <whitelist>
+            <directory suffix=".php">src</directory>
+        </whitelist>
+    </filter>
+</phpunit>

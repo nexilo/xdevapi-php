@@ -61,9 +61,25 @@ class XdevApiClient
      */
     public function getSession(): Session
     {
-        $this->session = $this->getRawSession();
-        if (null === $this->session) {
-            throw new Exception('Connection could not be established');
+        // xdevapi connection workaround
+        try {
+            $this->session = $this->getRawSession();
+        } catch (\Throwable $e) {
+            $this->throwException($e->getMessage());
         }
+
+        if ($this->session === null) {
+            $this->throwException('Cannot connect to database');
+        }
+
+        return $this->session;
+    }
+
+    /**
+     * @param string $message
+     */
+    private function throwException(string $message)
+    {
+        throw new Exception($message);
     }
 }
