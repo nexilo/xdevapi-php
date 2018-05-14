@@ -1,20 +1,20 @@
 <?php
 namespace Nexilo;
 
-class ClientBuilder
+class XdevApiClientBuilder
 {
     /**
-     * @var Client
+     * @var XdevApiClient
      */
     private static $instance;
 
     /**
      * @param $dsn
-     * @return Client
+     * @return XdevApiClient
      */
-    public static function getInstance($dsn): Client
+    public static function getInstance($dsn): XdevApiClient
     {
-        self::$instance = new Client();
+        self::$instance = new XdevApiClient();
         self::$instance->setDsn($dsn);
         return self::$instance;
     }

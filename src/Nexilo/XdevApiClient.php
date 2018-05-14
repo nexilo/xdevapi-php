@@ -4,7 +4,7 @@ namespace Nexilo;
 use mysql_xdevapi\Exception;
 use mysql_xdevapi\Session;
 
-class Client
+class XdevApiClient
 {
     /**
      * Scheme DSN string pattern
